@@ -162,32 +162,32 @@ $(function () {
    /*$('#portfolio__filters > .js-filter').click(function () {
       $(this).addClass('active').siblings().removeClass('active');
    });*/
-   const filter_link_items = document.querySelectorAll('.js-filter');
+   /*const filter_link_items = document.querySelectorAll('.js-filter');*/
 
    /**
     * @description - removes the active class from the filter link items
     */
-   function removeFilterLinkItemsActiveClass() {
+   /*function removeFilterLinkItemsActiveClass() {
       filter_link_items.forEach(filter_link_item => {
          filter_link_item.classList.remove('active');
       })
-   }
+   }*/
 
    /**
     * @description - add the active class to the filter link item that was clicked
     * @param e - the event of the click
     */
-   function addFilterLinkItemsActiveClass(e) {
+/*   function addFilterLinkItemsActiveClass(e) {
       removeFilterLinkItemsActiveClass();
       e.target.classList.add('active');
-   }
+   }*/
 
-   filter_link_items.forEach(filter_link_item => {
+/*   filter_link_items.forEach(filter_link_item => {
       filter_link_item.addEventListener('click', addFilterLinkItemsActiveClass);
-   });
+   });*/
 
    /**************** portfolio filterizr cards ****************/
-   const filterizr_options = {
+   /*const filterizr_options = {
       animationDuration: 0.5, // in seconds
       callbacks: {
          onFilteringStart: function () {
@@ -213,9 +213,9 @@ $(function () {
             height: '75px', margin: '0 auto', width: '75px', 'z-index': 2,
          },
       },
-   }
+   }*/
 
-   const filterizd = $('.filtr-container').filterizr({});
+   /*const filterizd = $('.filtr-container').filterizr({});*/
 
 });
 

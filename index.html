@@ -30,10 +30,64 @@
 </head>
 <body>
 <!-- preloader -->
-<div class="preloader scrollbar-hidden" id="preloader">
+<section class="preloader scrollbar-hidden" id="preloader">
     <img alt="Three spinning gears" class="preloader__gif"
          id="preloader__gif" src="./img/gifs/preloader.gif"/>
-</div>
+</section>
+<!-- navigation -->
+<section class="navigation" id="navigation">
+    <div class="navigation__button" id="navigation__button">
+        <span class="navigation__button-bar"></span>
+        <span class="navigation__button-bar"></span>
+        <span class="navigation__button-bar"></span>
+    </div>
+    <nav class="navigation__background" id="navigation__background">
+        <section class="navigation__background--inner" id="navigation__background--inner">
+            <ul class="navigation__list" id="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link active" href="#home">
+                    <span class="navigation__span">
+                        <i class="fas fa-home"></i>
+                    </span>
+                        home
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#about">
+                        <span class="navigation__span">
+                            <i class="fas fa-user-tie"></i>
+                        </span>
+                        about me
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#skills">
+                        <span class="navigation__span">
+                            <i class="fas fa-tools"></i>
+                        </span>
+                        my skills
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#portfolio">
+                        <span class="navigation__span">
+                            <i class="fas fa-images"></i>
+                        </span>
+                        portfolio
+                    </a>
+                </li>
+                <li class="navigation__item">
+                    <a class="navigation__link" href="#contact">
+                        <span class="navigation__span">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        contact me
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</section>
 
 <!-- jQuery-v-3.7.1 scripts -->
 <script src='js/jquery/jquery-3.7.1.min.js'></script>
