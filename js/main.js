@@ -1,8 +1,8 @@
 /**
- * maabdurrahman-portfolio-scripts
- * @author Mahdi Abdurrhaman
+ * mahdi-abdurrahman-portfolio-scripts
+ * @author Mahdi Abdurrahman
  * @version 1.0.0
- * @date 9 February 2024
+ * @date 9 December 2025
  */
 /*===================================================
           navigation and scroll-spy
@@ -104,7 +104,7 @@ $(function () {
    }
 
    /**
-    * @description - toogle the active class for the navigation_button, navigation_button-bars,
+    * @description - toggle the active class for the navigation_button, navigation_button-bars,
     * navigation_background, and navigation_list
     */
    function toggleNavigation() {
@@ -347,7 +347,7 @@ $(function () {
 
    /**
     * @description - checks whether input for email is valid or not, and adds an
-    * interacive validation message
+    * interactive validation message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
    function checkEmailInput() {

@@ -1,11 +1,8 @@
 @import "tailwindcss";
 
-@import "tailwindcss";
-
 @theme {
-   --font-body: 'Work Sans', sans-serif;
-   --font-heading: 'Libre Baskerville', serif;
-   --font-mono: 'Roboto Mono', monospace;
+   --font-body: 'Montserrat', sans-serif;
+   --font-heading: 'Lora', serif;
    /************************* typography scale *************************/
    --font-size-heading-01: 3.815rem;
    --font-size-heading-02: 3.052rem;
@@ -120,6 +117,7 @@
 
 }
 
+/*noinspection ALL*/
 @layer base {
    /*===============================================================
              Website Resets
@@ -145,14 +143,34 @@
    html {
       scroll-behavior: smooth;
    }
+   body {
+      position: relative;
+      z-index: 1;
+      overflow-x: hidden;
+      font-family: "Montserrat", sans-serif;
+      font-weight: var(--font-weight-normal);
+      font-style: normal;
+      font-optical-sizing: auto;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+      /*color: hsl(210, 30%, 10%)*/;
+      color: var(--color-augmented-800);
+      /*background-color: hsl(210, 12%, 88%); */
+      background-color: var(--color-blue-01-000);
+   }
 
    /*===============================================================
           Typography Scale - 1.250 - Major Third
    ==================================================================*/
    h1, h2, h3, h4, h5, h6 {
-      font-family: 'Libre Baskerville', serif;
-      font-weight: 700;
+      font-family: var(--font-heading);
+      font-weight: var(--font-weight-normal);
+      font-style: normal;
+      font-optical-sizing: auto;
       text-rendering: optimizeLegibility;
+      line-height: 1.3;
    }
 
    h1 {
@@ -180,7 +198,10 @@
    }
 
    p, small {
-      font-family: 'Work Sans', sans-serif;
+      font-family: var(--font-body);
+      font-weight: var(--font-weight-normal);
+      font-style: normal;
+      font-optical-sizing: auto;
       text-rendering: optimizeLegibility;
    }
 
@@ -213,7 +234,7 @@
 
    /*===============================================================
           Scrollbar Styles
-==================================================================*/
+   ==================================================================*/
    /* width */
    ::-webkit-scrollbar {
       visibility: hidden;
@@ -270,5 +291,52 @@
       font-weight: var(--font-weight-normal);
       color: var(--color-augmented-700);
       opacity: 0.5;
+   }
+}
+
+
+
+
+
+@layer components {
+   .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10000;
+      overflow: hidden;
+      background: var(--color-blue-01-900);
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+
+   }
+   .preloader__gif {
+      width: 25%;
+      align-self: center;
+   }
+
+   .scrollbar-hidden {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+   }
+
+   .scrollbar-hidden::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari and Opera */
+   }
+
+   /* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+   @media (max-width: 767px) {
+      .preloader__gif {
+         width: 50%;
+
+      }
    }
 }
