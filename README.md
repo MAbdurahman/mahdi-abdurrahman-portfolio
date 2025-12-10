@@ -1,11 +1,20 @@
 # mahdi-abdurrahman-portfolio
 
+<p>This repository contains a portfolio website for <strong>Mahdi Abdurrahman</strong>,
+a <em>Software and Web Developer</em>,<br> showcasing his soft and technical skills
+with e-commerce solutions, websites, and web applications.</p>
+
 ## Features
 - This is a HTMl5, CSS3, and JavaScript application utilizing Tailwind CSS
-- Methodology for naming convention is Block Element Modifier (BEM)
 - Utilizing Semantic HTML5 elements
 - Responsive design layout
 - Interactive CSS Animations
+- Methodology for naming convention is Block Element Modifier (BEM)
+```css
+  .block {}
+  .block__element {}
+  .block__element--modifier {}
+  ```
 
 ## To Use
 

@@ -5,15 +5,13 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <!--add your project information here -->
-    <meta content="Brief introduction about Mahdi Abdurrahman, Software and Web Developer. Showcasing his skills and projects " name="description">
-    <meta content="Developer portfolio, NodeJS, ReactJS, and MERN" name="keywords">
+    <meta content="Brief portfolio about Mahdi Abdurrahman, Software and Web Developer. Showcasing his soft and technical skills with e-commerce solutions, websites, and web applications" name="description">
+    <meta content="Developer portfolio, NodeJS, ReactJS, and MERN Stack" name="keywords">
     <meta content="Mahdi Abdurrahman | Portfolio" name="application-name" >
     <meta content="Mahdi Abdurrahman" name="author">
     
     <!--favicon -->
     <link href='favicon.png' rel="shortcut icon"/>
-    <!-- normalize styles -->
-    <link href='css/normalize.css' rel="stylesheet"/>
     <!-- fontawesome icons-->
     <link crossorigin="anonymous"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -25,6 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- normalize styles -->
+    <link href='css/normalize.css' rel="stylesheet"/>
+    <!-- main styles -->
     <link href='css/main.css' rel="stylesheet"/>
     <title>Mahdi Abdurrahman | Portfolio</title>
 </head>
@@ -88,6 +89,39 @@
         </section>
     </nav>
 </section>
+
+<!-- header -->
+<header class="header js-scroll-spy" id="home">
+    <div class="header__logo-container">
+        <img alt="Brand logo" class="header__logo" src="./img/header/logo.png"/>
+    </div>
+    <div class="header__video-container">
+        <video autoplay class="header__video-item" id="header__video-item" loop
+               muted>
+            <source src="./videos/mp4/binary-code.mp4" type="video/mp4">
+            <source src="./videos/ogv/binary-code.ogv" type="video/ogv">
+            <source src="./videos/webm/binary-code.webm" type="video/webm">
+            Your browser does not support the video tag!
+        </video>
+        <div class="header__video-overlay"></div>
+    </div>
+    <section class="header__content">
+        <div class="header__content-heading">
+            <h1 class="header__content-heading--one">Mahdi</h1>
+            <h1 class="header__content-heading--two">Abdurrahman</h1>
+        </div>
+        <div class="header__content-subheading">
+            <h2 class="header__content-subheading--one">Software and Web
+                Developer</h2>
+        </div>
+        <div class="header__content-buttons">
+            <a class="header__button" href="#about" id="header__button"
+               role="button">View More</a>
+            <a class="header__button-arrow" href="#about" id="arrow__down"><i
+                    class="fa fa-chevron-down"></i></a>
+        </div>
+    </section>
+</header>
 
 <!-- jQuery-v-3.7.1 scripts -->
 <script src='js/jquery/jquery-3.7.1.min.js'></script>
