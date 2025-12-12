@@ -7,7 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-neutral-400: hsl(210.19, 0%, 58%);
+    --color-neutral-400: hsl(211.2, 0%, 58%);
     --font-weight-normal: 400;
     --ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
     --ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
@@ -18,11 +18,10 @@
     --font-body: 'Montserrat', sans-serif;
     --font-heading: 'Lora', serif;
     --color-blue-01-000: hsl(211.2, 100%, 98%);
-    --color-blue-01-200: hsl(211.2, 90%, 90%);
+    --color-blue-01-200: hsl(211.2, 90%, 89.8%);
     --color-blue-01-600: hsl(211.2, 74.26%, 19.8%);
-    --color-blue-01-800: hsl(211.2, 60%, 20%);
-    --color-augmented-700: hsl(210.19, 20%, 28%);
-    --color-augmented-800: hsl(210.19, 25%, 18%);
+    --color-augmented-700: hsl(211.2, 20%, 28%);
+    --color-augmented-800: hsl(211.2, 25%, 18%);
     --ease-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
     --radius-200: 3px;
   }
@@ -342,12 +341,24 @@
   }
   html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  @media screen and (max-width: 540px) {
+    html {
+      font-size: 62.5%;
+    }
+  }
+  @media screen and (max-width: 390px) {
+    html {
+      font-size: 50%;
+    }
   }
   body {
     position: relative;
     z-index: 1;
     overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-body);
     font-weight: var(--font-weight-normal);
     font-style: normal;
     font-optical-sizing: auto;
@@ -422,6 +433,7 @@
   ::-webkit-scrollbar-track {
     margin-left: 1px;
     border-radius: 3px;
+    background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
     background: transparent;
@@ -468,7 +480,7 @@
   height: 100vh;
   z-index: 10000;
   overflow: hidden;
-  background: var(--color-blue-01-800);
+  background: var(--color-blue-01-600);
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -498,8 +510,8 @@
   position: fixed;
   top: 3%;
   right: 3%;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background-color: transparent;
   cursor: pointer;
   z-index: 9999;
@@ -568,7 +580,7 @@
   right: 0;
   height: 100%;
   width: 0;
-  background: var(--color-blue-01-800);
+  background: var(--color-blue-01-600);
   z-index: 1000;
   -webkit-transition: all 0.275s linear;
   transition: all 0.275s linear;
@@ -664,7 +676,7 @@
 }
 .navigation__link:hover, .navigation__link:active, .navigation__link.active {
   background-position: -100%;
-  color: var(--color-blue-01-800);
+  color: var(--color-blue-01-600);
 }
 .header {
   position: relative;
@@ -676,8 +688,8 @@
 }
 .header__logo-container {
   position: absolute;
-  top: 1.5rem;
-  left: 4rem;
+  top: 3%;
+  left: 3%;
 }
 .header__logo {
   height: 5rem;
@@ -700,12 +712,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
-  background: hsla(210, 33%, 19%, 0.5);
-  background: hsl(210, 64%, 28%);
+  background: hsl(211.2, 64%, 28%);
   opacity: 0.5;
-  z-index: 2;
 }
 .header__content {
   width: 100%;
@@ -736,14 +747,14 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: hsl(210, 51%, 94%);
+  color: var(--color-blue-01-000);
 }
 .header__content-heading--two {
   font-size: 3rem;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: hsl(210, 51%, 94%);
+  color: var(--color-blue-01-000);
 }
 .header__content-subheading {
   width: 100%;
@@ -761,11 +772,11 @@
   animation-fill-mode: backwards;
 }
 .header__content-subheading--one {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-body);
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 1px;
-  color: hsl(210, 0%, 58%);
+  color: hsl(211.2, 0%, 58%);
   opacity: 1;
   animation-name: animate-move-subheading-from-right;
   animation-duration: 3000ms;
@@ -788,64 +799,56 @@
   animation-fill-mode: backwards;
 }
 .header__button {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.25em;
+  padding: 12px 48px;
+  font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: hsl(210, 0%, 10%);
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  color: hsl(210, 0%, 38%);
-  background-color: hsl(210, 0%, 68%);
-  position: relative;
-  display: inline-block;
-  padding: 8px 16px;
-  font-family: "Montserrat", sans-serif;
-  color: hsl(210, 51%, 89%);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
+  color: hsl(211.2, 51%, 89%);
   background: linear-gradient(90deg, hsl(210, 51%, 89%) 0%, hsl(210, 51%, 89%) 50%, transparent 50%, transparent 100%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: background-position 0.25s ease-out;
-  margin-bottom: 2.25em;
-  padding: 12px 48px;
   border: 1px solid hsl(210, 51%, 89%);
   border-radius: 5px;
+  cursor: pointer;
 }
 .header__button:hover, .header__button:focus {
-  cursor: pointer;
-  color: hsl(210, 0%, 78%);
+  color: hsl(211.2, 0%, 78%);
   background-color: #2e2e2e;
+  cursor: pointer;
 }
 .header__button:hover, .header__button:focus {
-  cursor: pointer;
-  color: hsl(210, 0%, 78%);
+  color: hsl(211.2, 0%, 78%);
   background-color: transparent;
+  cursor: pointer;
 }
 .header__button:hover {
   background-position: left bottom;
 }
 .header__button:hover, .header__button:focus {
-  color: hsl(210, 64%, 23%);
-  border-color: hsl(210, 51%, 89%);
+  color: hsl(211.2, 64%, 23%);
+  border-color: hsl(211.2, 51%, 89%);
 }
 .header__button-arrow {
   position: relative;
   bottom: -20vh;
   font-size: 2rem;
-  color: hsl(210, 51%, 89%);
+  color: hsl(211.2, 51%, 89%);
   cursor: pointer;
+  transition: all 1s;
   animation-name: animate-bounce-up-down;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  transition: all 1s;
 }
 .header__button-arrow:hover, .header__button-arrow:focus {
-  color: hsl(210, 51%, 94%);
+  color: hsl(211.2, 51%, 94%);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
