@@ -592,7 +592,7 @@
    -webkit-box-align: center;
    align-items: center;
 }
-.header__logo-container {
+.header__logo__container {
    position: absolute;
    top: 3%;
    left: 3%;
@@ -600,7 +600,7 @@
 .header__logo {
    height: 5rem;
 }
-.header__video-container {
+.header__video__container {
    position: absolute;
    top: 0;
    left: 0;
@@ -608,13 +608,13 @@
    height: 100vh;
    z-index: -1;
 }
-.header__video-item {
+.header__video__item {
    width: 100%;
    height: 100%;
    -o-object-fit: cover;
    object-fit: cover;
 }
-.header__video-overlay {
+.header__video__overlay {
    position: absolute;
    top: 0;
    left: 0;
@@ -632,7 +632,7 @@
    justify-content: center;
    align-items: center;
 }
-.header__content-heading {
+.header__content__heading {
    width: 100%;
    height: 100%;
    display: flex;
@@ -647,7 +647,7 @@
    animation-delay: 1000ms;
    animation-fill-mode: backwards;
 }
-.header__content-heading--one {
+.header__content__heading--one {
    margin-bottom: -0.750em;
    font-size: 3rem;
    font-weight: 400;
@@ -655,14 +655,14 @@
    letter-spacing: 1px;
    color: var(--color-blue-01-000);
 }
-.header__content-heading--two {
+.header__content__heading--two {
    font-size: 3rem;
    font-weight: 100;
    text-transform: uppercase;
    letter-spacing: 1px;
    color: var(--color-blue-01-000);
 }
-.header__content-subheading {
+.header__content__subheading {
    width: 100%;
    height: 100%;
    display: flex;
@@ -679,7 +679,7 @@
 }
 
 /*noinspection ALL*/
-.header__content-subheading--one {
+.header__content__subheading--one {
    font-family: var(--font-body);
    font-size: 2.5rem;
    font-weight: 400;
@@ -694,7 +694,7 @@
    animation-fill-mode: backwards;
 }
 
-.header__content-buttons {
+.header__content__buttons {
    z-index: 2;
    display: flex;
    flex-direction: column;
@@ -747,7 +747,7 @@
    color: hsl(211.2, 64%, 23%);
    border-color: hsl(211.2, 51%, 89%);
 }
-.header__button-arrow {
+.header__button--arrow {
    position: relative;
    bottom: -20vh;
    font-size: 2rem;
@@ -758,7 +758,7 @@
    animation-duration: 2s;
    animation-iteration-count: infinite;
 }
-.header__button-arrow:hover, .header__button-arrow:focus {
+.header__button--arrow:hover, .header__button--arrow:focus {
    color: hsl(211.2, 51%, 94%);
    -webkit-transform: scale(1.2);
    transform: scale(1.2);
