@@ -111,7 +111,7 @@ $(function () {
       $('.navigation__button').toggleClass('active');
       $('.navigation__background').toggleClass('active');
       $('.navigation__list').toggleClass('active');
-      $('body').toggleClass('no-scroll');
+      $('body').toggleClass('utils-no-scroll');
    }
 
    /**
@@ -123,7 +123,7 @@ $(function () {
       $('.navigation__button').removeClass('active');
       $('.navigation__background').removeClass('active');
       $('.navigation__list').removeClass('active');
-      $('body').removeClass('no-scroll');
+      $('body').removeClass('utils-no-scroll');
    }
 
    $('#navigation__button').on('click tap', function () {

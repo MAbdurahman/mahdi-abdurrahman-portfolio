@@ -180,9 +180,6 @@
       background-color: var(--color-blue-01-000);
    }
 
-   .no-scroll {
-      overflow: hidden;
-   }
    /*===============================================================
           Typography Scale - 1.250 - Major Third
    ==================================================================*/
@@ -328,6 +325,10 @@
       height: fit-content;
       background-color: var(--color-neutral-100);
 
+   }
+
+   .utils-no-scroll {
+      overflow: hidden;
    }
 
    .utils-container-fluid {
@@ -1265,7 +1266,7 @@
            text-align: center;
          }
        }
-       .about__info--text {
+       .about__info__text {
          font-size: 1.125rem;
          font-weight: ab.$fw-font-weight-normal;
          color: ab.$clr-augmented-900;
@@ -1274,7 +1275,7 @@
          hyphens: auto;
        }
      }
-     .about__info--links {
+     .about__info__links {
        margin-top: .7em;
        display: flex;
        flex-direction: row;
@@ -1287,7 +1288,7 @@
 
      }
 
-     .about__info--single-link {
+     .about__info__link {
        @include ab.button-default();
        @include ab.background-transition-basic(ab.$clr-blue-01-900, ab.$clr-blue-01-600);
        font-weight: ab.$fw-font-weight-bold;
@@ -1302,7 +1303,7 @@
          color: ab.$clr-neutral-100;
        }
      }
-     .about__info--single-link:not(:last-child) {
+     .about__info__link:not(:last-child) {
        margin-right: 1.5em;
      }*/
 }
@@ -1362,12 +1363,12 @@
    color: hsl(211.2, 30%, 10%);
 }
 
-.about__info--text {
+.about__info__text {
    font-size: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
    hyphens: auto;
 }
 
-.about__info--links {
+.about__info__links {
    position: relative;
    width: 100%;
    display: flex;
@@ -1376,7 +1377,7 @@
 }
 
 /*noinspection ALL*/
-.about__info--single-link {
+.about__info__link {
    padding: 16px 32px;
    font-family: "Montserrat", sans-serif;
    font-size: medium;
@@ -1398,18 +1399,18 @@
    border-radius: 5px;
    box-shadow: 5px 3px 21px -1px rgba(34, 40, 45, 0.25), 5px 3px 21px -1px rgba(34, 40, 45, 0.25);
 }
-.about__info--single-link:hover, .about__info--single-link:focus {
+.about__info__link:hover, .about__info__link:focus {
    cursor: pointer;
    color: hsl(210, 0%, 78%);
 }
-.about__info--single-link:hover {
+.about__info__link:hover {
    background-position: left bottom;
 }
-.about__info--single-link:hover, .about__info--single-link:focus {
+.about__info__link:hover, .about__info__link:focus {
    color: hsl(210, 0%, 88%);
 }
 
-.about__info--single-link:not(:last-child) {
+.about__info__link:not(:last-child) {
    margin-right: 1.5em;
 }
 
