@@ -74,13 +74,13 @@ $(function () {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
-            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
+            // let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
 
             removeNavigationLinksActiveClass();
-            removeFooterNavigationLinksActiveClass();
+            // removeFooterNavigationLinksActiveClass();
 
             current_link.classList.add('active');
-            current_footer_link.classList.add('active');
+            // current_footer_link.classList.add('active');
          }
       });
    }
@@ -94,14 +94,14 @@ $(function () {
    function addNavigationLinksLongActiveClass(entries, long_observer) {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
-            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
-            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
+            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);/*
+            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);*/
 
             removeNavigationLinksActiveClass();
-            removeFooterNavigationLinksActiveClass();
+            // removeFooterNavigationLinksActiveClass();
 
             current_link.classList.add('active');
-            current_footer_link.classList.add('active');
+            // current_footer_link.classList.add('active');
          }
       });
    }
