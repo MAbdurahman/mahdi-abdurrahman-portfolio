@@ -11,18 +11,15 @@
  ==================================================================*/
 document.addEventListener('DOMContentLoaded', function () {
    // makes sure that whole site is loaded
-   $('#preloader__gif, #preloader').fadeOut(2500, function () {
-
-   });
+   $('#preloader__gif, #preloader').fadeOut(2500, function () {});
 });
-/*===================================================
-          navigation and scroll-spy
-=====================================================*/
+
+/*===============================================================
+          navigation and scroll-spy scripts
+==================================================================*/
 $(function () {
 
-   /*===============================================================
-          navigation and footer navigation
-   ==================================================================*/
+   /************** navigation and footer navigation **************/
    const short_options = {
       rootMargin: '0px', threshold: 0.7,
    }
@@ -74,13 +71,13 @@ $(function () {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
             let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
-            // let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
+            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
 
             removeNavigationLinksActiveClass();
-            // removeFooterNavigationLinksActiveClass();
+            removeFooterNavigationLinksActiveClass();
 
             current_link.classList.add('active');
-            // current_footer_link.classList.add('active');
+            current_footer_link.classList.add('active');
          }
       });
    }
@@ -94,14 +91,14 @@ $(function () {
    function addNavigationLinksLongActiveClass(entries, long_observer) {
       entries.forEach(entry => {
          if (entry.isIntersecting) {
-            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);/*
-            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);*/
+            let current_link = document.querySelector(`#navigation__list a[href='#${entry.target.id}']`);
+            let current_footer_link = document.querySelector(`#footer__navigation-list a[href='#${entry.target.id}']`);
 
             removeNavigationLinksActiveClass();
-            // removeFooterNavigationLinksActiveClass();
+            removeFooterNavigationLinksActiveClass();
 
             current_link.classList.add('active');
-            // current_footer_link.classList.add('active');
+            current_footer_link.classList.add('active');
          }
       });
    }
