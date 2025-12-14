@@ -2,85 +2,102 @@
 <html lang='en-US'>
 <head>
     <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='ie=edge' http-equiv='X-UA-Compatible'>
     <!--add your project information here -->
-    <meta content="Brief portfolio about Mahdi Abdurrahman, Software and Web Developer. Showcasing his soft and technical skills with e-commerce solutions, websites, and web applications" name="description">
-    <meta content="Developer portfolio, NodeJS, ReactJS, and MERN Stack" name="keywords">
-    <meta content="Mahdi Abdurrahman | Portfolio" name="application-name" >
-    <meta content="Mahdi Abdurrahman" name="author">
+    <meta content='Brief portfolio about Mahdi Abdurrahman, Software and Web Developer. Showcasing his soft and technical skills with e-commerce solutions, websites, and web applications'
+          name='description'>
+    <meta content='Developer portfolio, NodeJS, ReactJS, and MERN Stack'
+          name='keywords'>
+    <meta content='Mahdi Abdurrahman | Portfolio' name='application-name'>
+    <meta content='Mahdi Abdurrahman' name='author'>
     
     <!--favicon -->
-    <link href='favicon.png' rel="shortcut icon"/>
+    <link href='favicon.png' rel='shortcut icon'/>
     <!-- normalize styles -->
-    <link href='css/normalize.css' rel="stylesheet"/>
+    <link href='css/normalize.css' rel='stylesheet'/>
     <!-- fontawesome icons-->
-    <link crossorigin="anonymous"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link crossorigin='anonymous'
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
+          integrity='sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=='
+          referrerpolicy='no-referrer' rel='stylesheet'/>
     <!-- image hover-extended styles -->
-    <link href='css/imagehover-extended.css' rel="stylesheet"/>
+    <link href='css/imagehover-extended.css' rel='stylesheet'/>
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com' rel='preconnect'>
+    <link crossorigin href='https://fonts.gstatic.com' rel='preconnect'>
+    <link href='https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap'
+          rel='stylesheet'>
     <!-- main styles -->
-    <link href='css/main.css' rel="stylesheet"/>
+    <link href='css/main.css' rel='stylesheet'/>
+    
+    <!-- jQuery-v-3.7.1 scripts -->
+    <script defer src='js/jquery/jquery-3.7.1.min.js'></script>
+    <!-- filterizr scripts -->
+    <script defer src='js/filterizr/jquery.filterizr.js'></script>
+    <!--font awesome-->
+    <script defer src='js/all.min.js'></script>
+    <!-- waypoints js - https://github.com/imakewebthings/waypoints -->
+    <script defer src='js/waypoints/jquery.waypoints.min.js'></script>
+    <!-- Typed Plugin - https://github.com/mattboldt/typed.js -->
+    <script defer src='js/typed-js/typed.min.js'></script>
+    <!-- main scripts -->
+    <script defer src='js/main.js'></script>
     <title>Mahdi Abdurrahman | Portfolio</title>
 </head>
 <body>
 <!-- preloader -->
-<section class="preloader scrollbar-hidden" id="preloader">
-    <img alt="Three spinning gears" class="preloader__gif"
-         id="preloader__gif" src="./img/gifs/preloader.gif"/>
+<section class='preloader scrollbar-hidden' id='preloader'>
+    <img alt='Three spinning gears' class='preloader__gif'
+         id='preloader__gif' src='./img/gifs/preloader.gif'/>
 </section>
 <!-- navigation -->
-<section class="navigation" id="navigation">
-    <div class="navigation__button" id="navigation__button">
+<section class='navigation' id='navigation'>
+    <div class='navigation__button' id='navigation__button'>
         <span class='navigation__button__bar'></span>
         <span class='navigation__button__bar'></span>
         <span class='navigation__button__bar'></span>
     </div>
-    <nav class="navigation__background" id="navigation__background">
-        <section class="navigation__background--inner" id="navigation__background--inner">
-            <ul class="navigation__list" id="navigation__list">
-                <li class="navigation__item">
-                    <a class="navigation__link active" href="#home">
-                    <span class="navigation__span">
-                        <i class="fas fa-home"></i>
+    <nav class='navigation__background' id='navigation__background'>
+        <section class='navigation__background--inner'
+                 id='navigation__background--inner'>
+            <ul class='navigation__list' id='navigation__list'>
+                <li class='navigation__item'>
+                    <a class='navigation__link active' href='#home'>
+                    <span class='navigation__span'>
+                        <i class='fas fa-home'></i>
                     </span>
                         home
                     </a>
                 </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="#about">
-                        <span class="navigation__span">
-                            <i class="fas fa-user-tie"></i>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#about'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-user-tie'></i>
                         </span>
                         about me
                     </a>
                 </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="#skills">
-                        <span class="navigation__span">
-                            <i class="fas fa-tools"></i>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#skills'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-tools'></i>
                         </span>
                         my skills
                     </a>
                 </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="#portfolio">
-                        <span class="navigation__span">
-                            <i class="fas fa-images"></i>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#portfolio'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-images'></i>
                         </span>
                         portfolio
                     </a>
                 </li>
-                <li class="navigation__item">
-                    <a class="navigation__link" href="#contact">
-                        <span class="navigation__span">
-                            <i class="fas fa-envelope"></i>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#contact'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-envelope'></i>
                         </span>
                         contact me
                     </a>
@@ -91,21 +108,21 @@
 </section>
 
 <!-- header -->
-<header class="header js-scroll-spy" id="home">
+<header class='header js-scroll-spy' id='home'>
     <div class='header__logo__container'>
-        <img alt="Brand logo" class="header__logo" src="./img/header/logo.png"/>
+        <img alt='Brand logo' class='header__logo' src='./img/header/logo.png'/>
     </div>
     <div class='header__video__container'>
-        <video autoplay class='header__video__item' id="header__video-item" loop
+        <video autoplay class='header__video__item' id='header__video-item' loop
                muted>
-            <source src="./videos/mp4/binary-code.mp4" type="video/mp4">
-            <source src="./videos/ogv/binary-code.ogv" type="video/ogv">
-            <source src="./videos/webm/binary-code.webm" type="video/webm">
+            <source src='./videos/mp4/binary-code.mp4' type='video/mp4'>
+            <source src='./videos/ogv/binary-code.ogv' type='video/ogv'>
+            <source src='./videos/webm/binary-code.webm' type='video/webm'>
             Your browser does not support the video tag!
         </video>
         <div class='header__video__overlay'></div>
     </div>
-    <section class="header__content">
+    <section class='header__content'>
         <div class='header__content__heading'>
             <h1 class='header__content__heading--one'>Mahdi</h1>
             <h1 class='header__content__heading--two'>Abdurrahman</h1>
@@ -115,30 +132,30 @@
                 Developer</h2>
         </div>
         <div class='header__content__buttons'>
-            <a class="header__button" href="#about" id="header__button"
-               role="button">View More</a>
-            <a class='header__button--arrow' href="#about" id="arrow__down"><i
-                    class="fa fa-chevron-down"></i></a>
+            <a class='header__button' href='#about' id='header__button'
+               role='button'>View More</a>
+            <a class='header__button--arrow' href='#about' id='arrow__down'><i
+                    class='fa fa-chevron-down'></i></a>
         </div>
     </section>
 </header>
 <!-- main content -->
-<main class="main">
+<main class='main'>
     <!-- about section -->
-    <section class="section section__two js-scroll-spy" id="about">
-        <div class="utils-container">
-            <div class="about__section">
-                <div class="about__section__title">
-                    <h2 class="about__title">About Me</h2>
+    <section class='section section__two js-scroll-spy' id='about'>
+        <div class='utils-container'>
+            <div class='about__section'>
+                <div class='about__section__title'>
+                    <h2 class='about__title'>About Me</h2>
                 </div>
-                <div class="about__section__content">
-                    <div class="about__section--left">
-                        <img alt="Mahdi Abdurrahman"
-                             class="utils-img-responsive about__image"
-                             src="./img/about/mabdurrahman.png">
+                <div class='about__section__content'>
+                    <div class='about__section--left'>
+                        <img alt='Mahdi Abdurrahman'
+                             class='utils-img-responsive about__image'
+                             src='./img/about/mabdurrahman.png'>
                     </div>
-                    <div class="about__section--right">
-                        <p class="about__info--text">
+                    <div class='about__section--right'>
+                        <p class='about__info--text'>
                             Hello, I am <strong>Mahdi Abdurrahman</strong>, a
                             Software and Web Developer, living in the
                             southeast region of the United States, working primarily
@@ -152,7 +169,7 @@
                             Science, and I am self-taught in other information
                             technologies.
                         </p>
-                        <p class="about__info--text">
+                        <p class='about__info--text'>
                             I specialize in creating beautiful, reusable, and
                             professional websites, using the best
                             practices, standards, and guidelines.&nbsp;&nbsp;This
@@ -161,7 +178,7 @@
                             website traffic.&nbsp;&nbsp;<strong><em>I put
                             my heart and soul into my work!</em></strong>
                         </p>
-                        <p class="about__info--text utils-margin-bottom-small">
+                        <p class='about__info--text utils-margin-bottom-small'>
                             When not writing code, I continue to investigate,
                             experiment, and test to improve existing methods
                             of software and web development.&nbsp;&nbsp;For, I am not
@@ -171,12 +188,12 @@
                             for the Arts.&nbsp;&nbsp;<em>But, <strong>programming and
                             computer science are my passions!</strong></em>
                         </p>
-                        <div class="about__info--links">
-                            <a class="about__info--single-link"
-                               href="tel:901-424-5525">
+                        <div class='about__info--links'>
+                            <a class='about__info--single-link'
+                               href='tel:901-424-5525'>
                                 contact me
                             </a>
-                            <a class="about__info--single-link" href="#skills">
+                            <a class='about__info--single-link' href='#skills'>
                                 learn more
                             </a>
                         </div>
@@ -186,22 +203,22 @@
         </div>
     </section>
     <!-- skills section -->
-    <section class="section section__three js-scroll-spy" id="skills">
-        <div class="utils-container">
-            <div class="skills__section">
-                <h2 class="skills__section--title">My Skills</h2>
-                <section class="skills__section__content">
-                    <div class="skills__section__content--left">
-                        <h3 class="skills__section--sub-title">soft skills</h3>
-                        <section class="accordions">
-                            <section class="accordion">
-                                <input checked="checked" class="js-accordion-input"
-                                       id="handle1"
-                                       name="collapse" type="radio">
-                                <h4 class="handle">
-                                    <label for="handle1">Detail Oriented</label>
+    <section class='section section__three js-scroll-spy' id='skills'>
+        <div class='utils-container'>
+            <div class='skills__section'>
+                <h2 class='skills__section--title'>My Skills</h2>
+                <section class='skills__section__content'>
+                    <div class='skills__section__content--left'>
+                        <h3 class='skills__section--sub-title'>soft skills</h3>
+                        <section class='accordions'>
+                            <section class='accordion'>
+                                <input checked='checked' class='js-accordion-input'
+                                       id='handle1'
+                                       name='collapse' type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle1'>Detail Oriented</label>
                                 </h4>
-                                <div class="content">
+                                <div class='content'>
                                     <p>In programming and computer science, <strong>attention
                                         to detail is crucial</strong> for creating
                                         high-quality
@@ -218,15 +235,15 @@
                                         details is an immense ability.</p>
                                 </div>
                             </section>
-                            <section class="accordion">
-                                <input class="js-accordion-input" id="handle2"
-                                       name="collapse"
-                                       type="radio">
-                                <h4 class="handle">
-                                    <label for="handle2">Effective
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle2'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle2'>Effective
                                         Communication</label>
                                 </h4>
-                                <div class="content">
+                                <div class='content'>
                                     <p>Although programming is the basic and central
                                         part of computer science, the ability
                                         to <strong>communicate effectively is a
@@ -242,15 +259,15 @@
                                     </p>
                                 </div>
                             </section>
-                            <section class="accordion">
-                                <input class="js-accordion-input" id="handle3"
-                                       name="collapse"
-                                       type="radio">
-                                <h4 class="handle">
-                                    <label for="handle3">Creative
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle3'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle3'>Creative
                                         Problem-Solving</label>
                                 </h4>
-                                <div class="content">
+                                <div class='content'>
                                     <p>Some people think computer science is all
                                         logic, reason,
                                         and proofs, but that is simply not the case.
@@ -258,7 +275,8 @@
                                             essential
                                             skill</strong> that goes beyond writing
                                         code. When
-                                        bringing designs to life, one must be willing to
+                                        bringing designs to life, one must be willing
+                                        to
                                         think
                                         outside the box to solve problems and create
                                         unique
@@ -267,14 +285,14 @@
                                     </p>
                                 </div>
                             </section>
-                            <section class="accordion">
-                                <input class="js-accordion-input" id="handle4"
-                                       name="collapse"
-                                       type="radio">
-                                <h4 class="handle">
-                                    <label for="handle4">Time Management</label>
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle4'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle4'>Time Management</label>
                                 </h4>
-                                <div class="content">
+                                <div class='content'>
                                     <p>If there were ten commandments for programming
                                         and computer
                                         science, <strong>manage thy time wisely
@@ -291,15 +309,15 @@
                                         various tasks and responsibilities.</p>
                                 </div>
                             </section>
-                            <section class="accordion">
-                                <input class="js-accordion-input" id="handle5"
-                                       name="collapse"
-                                       type="radio">
-                                <h4 class="handle">
-                                    <label for="handle5">Teamwork and
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle5'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle5'>Teamwork and
                                         Cooperation</label>
                                 </h4>
-                                <div class="content">
+                                <div class='content'>
                                     <p>Being <strong>a good team player is a great
                                         skill</strong> in any
                                         organization, but it is particularly
@@ -314,71 +332,71 @@
                             </section>
                         </section>
                     </div>
-                    <div class="skills__section__content--right">
-                        <h3 class="skills__section--sub-title">tech skills</h3>
-                        <section class="progress__bars" id="progress-bars">
+                    <div class='skills__section__content--right'>
+                        <h3 class='skills__section--sub-title'>tech skills</h3>
+                        <section class='progress__bars' id='progress-bars'>
                             <!--skill 1-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>HTML5</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="90" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='90' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>90%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 2-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>CSS3</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="85" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='85' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>85%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 3-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>JavaScript</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="84" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='84' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>84%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 4-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>NodeJS</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="77" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='77' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>77%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 5-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>NoSQL/SQL</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="73" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='73' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>73%</span>
                                     </div>
                                 </div>
                             </div>
                             <!--skill 6-->
-                            <div class="skill">
+                            <div class='skill'>
                                 <h4>Git/GitHub</h4>
-                                <div class="progress">
-                                    <div aria-valuemax="100" aria-valuemin="0"
-                                         aria-valuenow="85" class="progress-bar"
-                                         role="progressbar" style="width: 0;">
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='85' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
                                         <span>85%</span>
                                     </div>
                                 </div>
@@ -390,21 +408,229 @@
         </div>
     </section>
     <!-- portfolio section -->
+    <section class='section section__four js-scroll-spy--long' id='portfolio'>
+        <div class='utils-container'>
+            <div class='portfolio__section'>
+                <div class='portfolio__section--upper'>
+                    <h2 class='portfolio__section--title'>My Portfolio</h2>
+                    <section class='portfolio__section--container'>
+                        <ul class='portfolio__filters' id='portfolio__filters'>
+                            <li class='portfolio__filter js-filter active'
+                                data-filter='all'>
+                                projects
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='software'>
+                                software
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='website'>
+                                websites
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='webapp'>
+                                webApps
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class='portfolio__section--bottom filtr-container'
+                     style='gap: 1.5em'>
+                    <!-- portfolio card 01 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='software' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    The true sign of intelligence is not knowledge,
+                                    but
+                                    imagination. - Albert Einstein
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Software</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 02 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='website' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Imagination should be used not to escape
+                                    reality, but to create it. - Colin Wilson
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Website</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 03 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='webapp, software' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Design is not a display of wealth; but,
+                                    an expression of imagination. - Anonymous
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Web App</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 04 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='software, webapp' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    The true sign of intelligence is not knowledge,
+                                    but
+                                    imagination. - Albert Einstein
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Software</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 05 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='website, webapp' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Imagination should be used not to escape
+                                    reality, but to create it. - Colin Wilson
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Website</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 06 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='webapp, website' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Design is not a display of wealth; but,
+                                    an expression of imagination. - Anonymous
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Web App</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section -->
+    <section class=" section section__five js-scroll-spy" id="contact">
+        <div class="utils-container">
+            <div class="contact__section">
+                <div class="contact__section--upper">
+                    <div class="contact__section--title-text">
+                        <h2 class="contact__section--title">Contact Me</h2>
+                    </div>
+                    <div class="contact__section--title-paragraph"
+                         id="contact__section--title-paragraph">
+                        <h5 class="contact__section--paragraph"
+                            id="contact__section--paragraph">I</h5>
+                    </div>
+                </div>
+                <div class="contact__section--bottom">
+                    <div class="contact__form--group" id="contact__form--group">
+                        <form action="" class="contact__form" id="contact__form">
+                            <div class="contact__form--content js-effect-07">
+                                <input class="utils-effect-07" id="input-01"
+                                       name="fullName"
+                                       placeholder="" type="text"/>
+                                <label for="input-01">Full name</label>
+                                <span class="focus-background-07"></span>
+                                <span class="contact__form--input-prompt"
+                                      id="contact__form--name-prompt">&nbsp;</span>
+                            </div>
+                            <div class="contact__form--content js-effect-07">
+                                <input class="utils-effect-07" id="input-02"
+                                       name="email"
+                                       placeholder="" type="text"/>
+                                <label for="input-02">Email</label>
+                                <span class="focus-background-07"></span>
+                                <span class="contact__form--input-prompt"
+                                      id="contact__form--email-prompt">&nbsp;</span>
+                            </div>
+                            <div class="contact__form--content-textarea js-effect-07">
+                                <textarea class="utils-effect-07"
+                                          id="contact__form--message"
+                                          maxlength="160" name="message"
+                                          placeholder="" rows="3"
+                                          type="textarea"></textarea>
+                                <label for="contact__form--message">Message</label>
+                                <span class="focus-background-07"></span>
+                                <span class="contact__form--input-prompt-textarea"
+                                      id="contact__form--message-prompt">&nbsp;</span>
+                            </div>
+                            <div class="notification__message"
+                                 id="notification__message"></div>
+                            <div class="contact__form--content">
+                                <input class="contact__form--button submit"
+                                       id="contact__form--submit"
+                                       type="button"
+                                       value="Send Message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    
+    <!-- footer section -->
+
 </main>
-
-
 </body>
-<!-- jQuery-v-3.7.1 scripts -->
-<script src='js/jquery/jquery-3.7.1.min.js'></script>
-<!-- filterizr scripts -->
-<script src='js/filterizr/jquery.filterizr.js'></script>
-<!--font awesome-->
-<script src='js/all.min.js'></script>
-<!-- waypoints js - https://github.com/imakewebthings/waypoints -->
-<script src='js/waypoints/jquery.waypoints.min.js'></script>
-<!-- Typed Plugin - https://github.com/mattboldt/typed.js -->
-<script src='js/typed-js/typed.min.js'></script>
-<!-- main scripts -->
-<script src='js/main.js'></script>
 </html>
