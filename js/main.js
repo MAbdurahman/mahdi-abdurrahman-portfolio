@@ -12,6 +12,7 @@
 document.addEventListener('DOMContentLoaded', function () {
    // makes sure that whole site is loaded
    $('#preloader__gif, #preloader').fadeOut(2500, function () {});
+
 });
 
 /*===============================================================
@@ -108,10 +109,10 @@ $(function () {
     * navigation_background, and navigation_list
     */
    function toggleNavigation() {
-      $('.navigation__button').toggleClass('active');
-      $('.navigation__background').toggleClass('active');
-      $('.navigation__list').toggleClass('active');
-      $('body').toggleClass('utils-no-scroll');
+      document.querySelector('.navigation__button').classList.toggle('active');
+      document.querySelector('.navigation__background').classList.toggle('active');
+      document.querySelector('.navigation__list').classList.toggle('active');
+      document.querySelector('body').classList.toggle('utils-no-scroll');
    }
 
    /**
@@ -120,19 +121,14 @@ $(function () {
     * when the navigation_list or navigation_item is clicked.
     */
    function closeNavigation() {
-      $('.navigation__button').removeClass('active');
-      $('.navigation__background').removeClass('active');
-      $('.navigation__list').removeClass('active');
-      $('body').removeClass('utils-no-scroll');
+      document.querySelector('.navigation__button').classList.remove('active');
+      document.querySelector('.navigation__background').classList.remove('active');
+      document.querySelector('.navigation__list').classList.remove('active');
+      document.querySelector('body').classList.remove('utils-no-scroll');
    }
 
-   $('#navigation__button').on('click tap', function () {
-      toggleNavigation();
-   });
-
-   $('#navigation__list, .navigation__item').on('click tap', function () {
-      closeNavigation();
-   });
+   document.querySelector('#navigation__button').addEventListener('click', toggleNavigation);
+   document.querySelector('#navigation__list, .navigation__item').addEventListener('click', closeNavigation);
 
 });
 
@@ -223,7 +219,7 @@ $(function () {
 $(function () {
    $('#contact__section--title-paragraph').waypoint(function () {
       var typed5 = new Typed('#contact__section--paragraph', {
-         strings: ['If you', 'If you have any', 'If you have any questions or wish', 'If you have any questions or wish to collaborate,', 'If you have any questions or wish to collaborate, send me a message! ',],
+         strings: ['If you have any', 'If you have any questions or wish', 'If you have any questions or wish to collaborate,', 'If you have any questions or wish to collaborate, send me a message! ',],
          typeSpeed: 120,
          backSpeed: 70,
          backDelay: 1000, // cursorChar: '_',
@@ -254,11 +250,11 @@ $(function () {
    const name_pattern = /^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|I|II|III|IV))?$/g;
    const email_pattern = /^[!A-Z0-9#$&?*^~_%+-]+(\.[A-Z0-9!_%+-^]+)*?@[A-Z0-9-]+([A-Z0-9.-])*\.[A-Z]{2,}$/i;
    const required_message_length = 30;
-   const maximum_message_length = 160;
+   // const maximum_message_length = 160;
 
    const semantic_success = '#166534';
    const semantic_alert = '#991B1B';
-   const semantic_warn = '#C68A04';
+   // const semantic_warn = '#C68A04';
 
    let is_name_valid = false;
    let is_email_valid = false;
@@ -270,7 +266,7 @@ $(function () {
    const notification_message = $('#notification__message');
    const submit_button = $('#contact__form--submit');
    const notification_title = $('#notification__message--title');
-   const notification_text = $('#notification__message--text');
+   // const notification_text = $('#notification__message--text');
 
    let timeoutID1;
    let timeoutID2;
@@ -384,7 +380,7 @@ $(function () {
       form_message = removeHTMLTags(form_message);
 
       let characters_left = required_message_length - form_message.length;
-      let characters_number = maximum_message_length - form_message.length;
+      // let characters_number = maximum_message_length - form_message.length;
       let message = '';
 
 

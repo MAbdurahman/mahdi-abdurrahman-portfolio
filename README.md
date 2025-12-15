@@ -7,8 +7,9 @@ with e-commerce solutions, websites, and web applications.</p>
 ## Features
 - This is a HTMl5, CSS3, and JavaScript application utilizing Tailwind CSS
 - Utilizing Semantic HTML5 elements
-- Responsive design layout
+- Responsive design layout with Flexbox and CSS Grid
 - Interactive CSS Animations
+- Hover effects and transitions
 - Methodology for naming convention is Block Element Modifier (BEM)
 ```css
   .block {}
