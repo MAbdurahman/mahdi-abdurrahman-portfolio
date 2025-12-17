@@ -2360,7 +2360,6 @@ i.fa-brands.fa-linkedin:hover, i.fa-brands.fa-linkedin:focus, i.fa-brands.fa-squ
 [class^=imghvr-shutter-out-]:before, [class*=" imghvr-shutter-out-"]:before {
   content: "";
   position: absolute;
-  background: #135796;
   background: hsl(210, 0%, 28%);
   -webkit-transition-delay: 0.105s;
   transition-delay: 0.105s;

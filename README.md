@@ -36,3 +36,5 @@ To build the project, run the following command
 (builds to `css/main.css`, which is the final CSS file)
 
 `npm run build or yarn build`
+
+![Image](https://github.com/user-attachments/assets/bde68e01-1035-4e53-8fe6-d815827bbc80)
