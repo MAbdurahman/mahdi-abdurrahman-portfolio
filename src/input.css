@@ -496,6 +496,10 @@
       letter-spacing: 0.5px;
    }
 
+   .utils-text-center {
+      text-align: center;
+   }
+
    .flex-center {
       display: flex;
       justify-content: center;
@@ -2068,7 +2072,7 @@
 .contact__section--bottom .contact__form--group .contact__form .notification__message--title {
    margin-bottom: 0.5em;
    font-weight: 600;
-   text-align: center;
+   text-align: center !important;
    letter-spacing: 1px;
 }
 .contact__section--bottom .contact__form--group .contact__form .notification__message--text {
@@ -2565,7 +2569,7 @@ i.fa-brands.fa-codepen:focus {
 }
 
 .utils-text-center {
-   text-align: center;
+   text-align: center !important;
 }
 
 .utils-margin-bottom-small {
@@ -2700,7 +2704,7 @@ i.fa-brands.fa-codepen:focus {
 [class^=imghvr-shutter-out-]:before, [class*=" imghvr-shutter-out-"]:before {
    content: "";
    position: absolute;
-   background: #135796;
+   /*background: #135796;*/
    background: hsl(210, 0%, 28%);
    -webkit-transition-delay: 0.105s;
    transition-delay: 0.105s;

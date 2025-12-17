@@ -9,6 +9,7 @@ with e-commerce solutions, websites, and web applications.</p>
 - Utilizing Semantic HTML5 elements
 - Responsive design layout with Flexbox and CSS Grid
 - Interactive CSS Animations
+- Interactive validation for contact form
 - Hover effects and transitions
 - Methodology for naming convention is Block Element Modifier (BEM)
 ```css

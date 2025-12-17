@@ -10,9 +10,26 @@
           preloader scripts
  ==================================================================*/
 document.addEventListener('DOMContentLoaded', function () {
-   // makes sure that whole site is loaded
-   $('#preloader__gif, #preloader').fadeOut(2500, function () {});
+   // makes sure that whole site is loaded, so the 2500ms counter-down coincides with
+   // the preloader and the delay of 3000ms for the header content animation
+  const preloader = document.getElementById('preloader');
+   const preloader_gif = document.getElementById('preloader__gif');
 
+
+   if (preloader_gif) {
+      preloader_gif.style.transition = 'opacity 2500ms ease-in-out';
+      preloader_gif.style.opacity = '0';
+
+   }
+   if (preloader) {
+      preloader.style.transition = 'opacity 2500ms ease-in-out';
+      preloader.style.opacity = '0';
+   }
+
+   setTimeout(function () {
+      preloader_gif.style.display = 'none';
+      preloader.style.display = 'none';
+   }, 2500);
 });
 
 /*===============================================================
@@ -21,9 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
 $(function () {
 
    /************** navigation and footer navigation **************/
+   // the regular height sections
    const short_options = {
       rootMargin: '0px', threshold: 0.7,
    }
+   // the longer height section, especially the portfolio section
    const long_options = {
       rootMargin: '0px', threshold: 0.5,
    }
@@ -46,6 +65,7 @@ $(function () {
 
    /**
     * @description - removes active class from navigation links
+    * @returns {void}
     */
    function removeNavigationLinksActiveClass() {
       navigation_links.forEach(navigation_link => {
@@ -55,6 +75,7 @@ $(function () {
 
    /**
     * @description - removes active class from footer navigation links
+    * @returns {void}
     */
    function removeFooterNavigationLinksActiveClass() {
       footer_navigation_links.forEach(footer_navigation_link => {
@@ -67,6 +88,7 @@ $(function () {
     * class to the current navigation link whose 'href=#id' is in the viewport
     * @param entries - the sections that are in the array to observed
     * @param short_observer - the Intersection Observer
+    * @returns {void}
     */
    function addNavigationLinksActiveClass(entries, short_observer) {
       entries.forEach(entry => {
@@ -88,6 +110,7 @@ $(function () {
     * class to the current navigation link whose 'href=#id' is in the viewport
     * @param entries - the sections that are in the array to observed
     * @param long_observer - the IntersectionObserver
+    * @returns {void}
     */
    function addNavigationLinksLongActiveClass(entries, long_observer) {
       entries.forEach(entry => {
@@ -105,8 +128,9 @@ $(function () {
    }
 
    /**
-    * @description - toggle the active class for the navigation_button, navigation_button-bars,
+    * @description - toggles the active class for the navigation_button, navigation_button-bars,
     * navigation_background, and navigation_list
+    * @returns {void}
     */
    function toggleNavigation() {
       document.querySelector('.navigation__button').classList.toggle('active');
@@ -119,6 +143,7 @@ $(function () {
     * @description - removes the active class on the navigation_button, navigation_background,
     * navigation_list and removes the no-scroll class on the body. Thus, closing the navigation
     * when the navigation_list or navigation_item is clicked.
+    * @returns {void}
     */
    function closeNavigation() {
       document.querySelector('.navigation__button').classList.remove('active');
@@ -153,15 +178,21 @@ $(function () {
           portfolio section
 ==================================================================*/
 $(function () {
-
    /****** add and remove active class from portfolio filter buttons ******/
-   $('#portfolio__filters > .js-filter').click(function () {
-      $(this).addClass('active').siblings().removeClass('active');
+   document.querySelectorAll('#portfolio__filters > .js-filter').forEach(function(filter) {
+      filter.addEventListener('click', function() {
+         document.querySelectorAll('#portfolio__filters > .js-filter').forEach(function(sibling) {
+            sibling.classList.remove('active');
+         });
+         this.classList.add('active');
+      });
    });
+
    const filter_link_items = document.querySelectorAll('.js-filter');
 
    /**
     * @description - removes the active class from the filter link items
+    * @returns {void}
     */
    function removeFilterLinkItemsActiveClass() {
       filter_link_items.forEach(filter_link_item => {
@@ -172,6 +203,7 @@ $(function () {
    /**
     * @description - add the active class to the filter link item that was clicked
     * @param e - the event of the click
+    * @returns {void}
     */
    function addFilterLinkItemsActiveClass(e) {
       removeFilterLinkItemsActiveClass();
@@ -250,23 +282,20 @@ $(function () {
    const name_pattern = /^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|I|II|III|IV))?$/g;
    const email_pattern = /^[!A-Z0-9#$&?*^~_%+-]+(\.[A-Z0-9!_%+-^]+)*?@[A-Z0-9-]+([A-Z0-9.-])*\.[A-Z]{2,}$/i;
    const required_message_length = 30;
-   // const maximum_message_length = 160;
 
    const semantic_success = '#166534';
    const semantic_alert = '#991B1B';
-   // const semantic_warn = '#C68A04';
 
    let is_name_valid = false;
    let is_email_valid = false;
    let is_message_valid = false;
 
-   const name_input = $('#input-01');
-   const email_input = $('#input-02');
-   const message_input = $('#contact__form--message');
-   const notification_message = $('#notification__message');
-   const submit_button = $('#contact__form--submit');
-   const notification_title = $('#notification__message--title');
-   // const notification_text = $('#notification__message--text');
+   const name_input = document.getElementById('input-01');
+   const email_input = document.getElementById('input-02');
+   const message_input = document.getElementById('contact__form--message');
+   const notification_message = document.getElementById('notification__message');
+   const notification_title = document.getElementById('notification__message--title');
+   const submit_button = document.getElementById('contact__form--submit');
 
    let timeoutID1;
    let timeoutID2;
@@ -284,7 +313,9 @@ $(function () {
     * @returns {string} - returns a String
     */
    function makeString(object) {
-      if (object == null) return '';
+      if (object == null) {
+         return '';
+      }
       return '' + object;
    }
 
@@ -302,6 +333,7 @@ $(function () {
     * @param message - the message in form of a String
     * @param prompt_location - the element id where the message is displayed
     * @param color - the semantic color alert or success
+    * @returns {void}
     */
    function getPrompt(message, prompt_location, color) {
       document.getElementById(prompt_location).innerHTML = message;
@@ -313,8 +345,8 @@ $(function () {
     * interactive message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   function checkNameInput() {
-      let name = $('#input-01').val();
+   function validateName() {
+      let name = name_input.value;
       let message = '';
 
       if (name.length === 0) {
@@ -344,8 +376,8 @@ $(function () {
     * interactive validation message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   function checkEmailInput() {
-      let email = $('#input-02').val();
+   function validateEmail() {
+      let email = email_input.value;
       let message = '';
 
       if (email.length === 0) {
@@ -375,14 +407,12 @@ $(function () {
     * adds an interactive validation message
     * @returns {boolean} - if input is valid, returns true; otherwise, return false
     */
-   function checkMessageInput() {
-      let form_message = $('#contact__form--message').val();
+   function validateMessage() {
+      let form_message = message_input.value;
       form_message = removeHTMLTags(form_message);
-
-      let characters_left = required_message_length - form_message.length;
-      // let characters_number = maximum_message_length - form_message.length;
       let message = '';
 
+      let characters_left = required_message_length - form_message.length;
 
       if (form_message.length < required_message_length) {
          message = characters_left + ' more characters required in message!';
@@ -390,6 +420,7 @@ $(function () {
          getPrompt(message, 'contact__form--message-prompt', semantic_alert);
 
          return false;
+
       } else {
          message = 'Valid message';
          is_message_valid = true;
@@ -400,30 +431,34 @@ $(function () {
    }
 
    /**
-    * @description -
+    * @description - performs the invalid form action and shows the notification message
+    * @returns {void}
     */
    function performInvalidForm() {
       if (timeoutID1) {
          clearTimeout(timeoutID1);
          clearTimeout(timeoutID2);
       }
-      notification_message.css('display', 'block');
-      notification_title.innerHTML = 'Error';
-      notification_message.addClass('move-in-from-right notification__error');
+
+      notification_message.style.display = 'block';
+      notification_title.innerHTML = `<h4 class='utils-text-center'>Error!</h4>`;
+      notification_title.classList.add('.notification__message--title');
+      notification_message.classList.add('move-in-from-right', 'notification__error');
       updateErrors();
 
       timeoutID1 = setTimeout(() => {
-         notification_message.addClass('exit-to-left');
-         notification_message.removeClass('move-in-from-right');
+         notification_message.classList.add('exit-to-left');
+         notification_message.classList.remove('move-in-from-right');
          timeoutID2 = setTimeout(() => {
-            notification_message.removeClass('exit-to-left');
-            notification_message.css('display', 'none');
+            notification_message.classList.remove('exit-to-left');
+            notification_message.style.display = 'none';
          }, 1500);
       }, 3500);
    }
 
    /**
-    * @description -
+    * @description - performs the valid form action and shows the notification message
+    * @returns {void}
     */
    function performValidForm() {
       if (timeoutID3) {
@@ -434,35 +469,36 @@ $(function () {
          clearTimeout(timeoutID7);
       }
       timeoutID3 = setTimeout(function () {
-         submit_button.val('Valid Form');
+         submit_button.innerHTML = 'Valid Form';
+
       }, 1500);
 
-      submit_button.addClass('valid');
+      submit_button.classList.add('valid');
 
       timeoutID4 = setTimeout(function () {
-         submit_button.val('Sending Message...');
+         submit_button.value = 'Sending Message...';
+
       }, 1500);
 
-      submit_button.prop('disable', true);
+      submit_button.disabled = true;
 
-      if (submit_button.hasClass('valid')) {
+      if (submit_button.classList.contains('valid')) {
+
          timeoutID5 = setTimeout(function () {
-            submit_button.val('Message Sent');
+            submit_button.value = 'Message Sent';
 
             /* show notification message with success */
-            notification_message.css('display', 'block');
-            notification_message.addClass('move-in-from-right notification__success');
-            notification_message.html(`<h4>Success!</h4>
-                 <p>Your message was successfully sent.</p>
-                 `);
-            notification_message.children('h4').addClass('notification__message--title');
-            notification_message.children('span').addClass('notification__message--text');
+            notification_message.style.display = 'block';
+            notification_message.classList.add('move-in-from-right', 'notification__success');
+            notification_message.innerHTML = `<h4 class='utils-text-center'>Success!</h4><p class='notification__message--text'>Your message was successfully sent.</p>`;
+
             timeoutID6 = setTimeout(() => {
-               notification_message.addClass('exit-to-left');
-               notification_message.removeClass('move-in-from-right');
+               notification_message.classList.add('exit-to-left');
+               notification_message.classList.remove('move-in-from-right');
+
                timeoutID7 = setTimeout(() => {
-                  notification_message.removeClass('exit-to-left');
-                  notification_message.css('display', 'none')
+                  notification_message.classList.remove('exit-to-left');
+                  notification_message.style.display = 'none';
                }, 5500);
             }, 8000);
          }, 5000);
@@ -471,7 +507,8 @@ $(function () {
    }
 
    /**
-    * @description -
+    * @description - resets the form and clears all the timeouts
+    * @returns {void}
     */
    function resetForm() {
       if (timeoutID8) {
@@ -489,11 +526,12 @@ $(function () {
          location.reload();
 
          timeoutID9 = setTimeout(() => {
-            name_input.empty();
-            email_input.empty();
-            message_input.empty();
-            submit_button.val('Send Message');
-            submit_button.prop('disable', false);
+            name_input.value = '';
+            email_input.value = '';
+            message_input.value = '';
+            submit_button.value = 'Send Message';
+            submit_button.classList.remove('valid');
+            submit_button.disabled = false;
             is_name_valid = false;
             is_email_valid = false;
             is_message_valid = false;
@@ -502,67 +540,67 @@ $(function () {
    }
 
    /**
-    * @description -
+    * @description - updates the error message in the notification message
+    * @returns {void}
     */
    function updateErrors() {
       let message = '';
-      notification_message.html(`<h4 class='notitication__message--title'>Error!</h4>
-          <p class='notification__message--text'>The following are error(s) in the form:</p>`);
-      notification_message.children('h4').addClass('notification__message--title');
-      notification_message.children('p').addClass('notification__message--text');
+      notification_message.innerHTML = `<h4 class='notitication__message--title utils-text-center'>Error!</h4><p class='notification__message--text'>The following are error(s) in the form:</p>`;
 
       if (!is_name_valid) {
-         if ($('#input-01').val().length === 0) {
-            notification_message.append(`<p>Your first and last name are required!</p>`);
-            notification_message.children('p').addClass('notification__message--text');
-            message = 'First and last name are required!';
+         if (name_input.value.length === 0) {
+            notification_message.innerHTML += `<p class='notification__message--text'>Your first and last names are required!</p>`;
+            message = 'First and last names are required!';
             getPrompt(message, 'contact__form--name-prompt', semantic_alert);
 
          } else {
-            notification_message.append(`<p>Enter your first and last name!</p>`);
-            notification_message.children('p').addClass('notification__message--text');
+            notification_message.innerHTML += `<p class='notification__message--text'>Enter your first and last name!</p>`;
             message = 'Enter first and last name!';
             getPrompt(message, 'contact__form--name-prompt', semantic_alert);
          }
       }
       if (!is_email_valid) {
-         if ($('#input-02').val().length === 0) {
-            notification_message.append(`<p>Your email address is required!</p>`);
-            notification_message.children('p').addClass('notification__message--text');
+         if (email_input.value.length === 0) {
+            notification_message.innerHTML += `<p class='notification__message--text'>Your email address is required!</p>`;
             message = 'Email address is required!';
             getPrompt(message, 'contact__form--email-prompt', semantic_alert);
 
          } else {
-            notification_message.append(`<p>Your email address is Invalid!</p>`);
-            notification_message.children('p').addClass('notification__message--text');
-            message = 'Invalid email address!';
+            notification_message.innerHTML += `<p class='notification__message--text'>Your email address is Invalid!</p>`;
+            message = 'Email address is Invalid!';
             getPrompt(message, 'contact__form--email-prompt', semantic_alert);
          }
       }
       if (!is_message_valid) {
-         let characters_left = required_message_length - $('#contact__form--message').val().length;
+         let characters_left = required_message_length - message_input.value.length;
          let messageData = characters_left + ' more characters required in message!';
 
-         notification_message.append(`<p>${messageData}</p>`);
-         notification_message.children('p').addClass('notification__message--text');
+         notification_message.innerHTML += `<p class='notification__message--text'>${messageData}</p>`;
          message = characters_left + ' more characters required in message!';
          getPrompt(message, 'contact__form--message-prompt', semantic_alert);
       }
    }
 
    /**
-    * @description -
+    * @description - validates the contact form and performs actions based on the validation. IF
+    * the form is valid, it performs the valid form actions; otherwise, it performs the invalid
+    * form actions.
+    * @returns {void}
     */
-   function checkFormValidation() {
+   function validateForm() {
       if (is_name_valid && is_email_valid && is_message_valid) {
          performValidForm();
+
       } else {
          performInvalidForm();
+
       }
    }
 
-   name_input.keyup(checkNameInput);
-   email_input.keyup(checkEmailInput);
-   message_input.keyup(checkMessageInput);
-   submit_button.click(checkFormValidation);
+   name_input.addEventListener('keyup', validateName);
+   email_input.addEventListener('keyup', validateEmail);
+   message_input.addEventListener('keyup', validateMessage);
+   submit_button.addEventListener('click', validateForm);
+
+
 });
