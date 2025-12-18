@@ -17,19 +17,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
    if (preloader_gif) {
-      preloader_gif.style.transition = 'opacity 2500ms ease-in-out';
+      preloader_gif.style.transition = 'opacity 3000ms ease-in-out';
       preloader_gif.style.opacity = '0';
 
    }
    if (preloader) {
-      preloader.style.transition = 'opacity 2500ms ease-in-out';
+      preloader.style.transition = 'opacity 3000ms ease-in-out';
       preloader.style.opacity = '0';
    }
 
    setTimeout(function () {
       preloader_gif.style.display = 'none';
       preloader.style.display = 'none';
-   }, 2500);
+   }, 3000);
 });
 
 /*===============================================================
@@ -268,15 +268,28 @@ $(function () {
    });
 
    //**************** effect 07 scripts ****************//
-   $('.utils-effect-07').val('');
+   document.querySelector('.utils-effect-07').value = '';
 
-   $('.js-effect-07 .utils-effect-07').focusout(function () {
-      if ($(this).val() !== '') {
-         $(this).addClass('has-content');
-      } else {
-         $(this).removeClass('has-content');
-      }
+   document.querySelectorAll('.js-effect-07 .utils-effect-07').forEach(function(element) {
+      element.addEventListener('focusout', function() {
+         if (this.value !== '') {
+            this.classList.add('has-content');
+
+         } else {
+            this.classList.remove('has-content');
+
+         }
+      });
    });
+
+
+   function removeJSEffect() {
+      document.querySelector('.utils-effect-07').value = '';
+      document.querySelectorAll('.js-effect-07 .utils-effect-07').forEach(function(element) {
+         element.classList.remove('has-content');
+
+      });
+   }
 
    //**************** form validation scripts ****************//
    const name_pattern = /^([a-zA-Z]{2,}\s[a-zA-z]{1,}'?-?[a-zA-Z]{1,}\s?([a-zA-Z]{1,})?)(,? (?:[JS]r\.?|I|II|III|IV))?$/g;
@@ -296,6 +309,11 @@ $(function () {
    const notification_message = document.getElementById('notification__message');
    const notification_title = document.getElementById('notification__message--title');
    const submit_button = document.getElementById('contact__form--submit');
+
+   let name_prompt = document.getElementById('contact__form--name-prompt');
+   let email_prompt = document.getElementById('contact__form--email-prompt');
+   let message_prompt = document.getElementById('contact__form--message-prompt');
+   let message = '';
 
    let timeoutID1;
    let timeoutID2;
@@ -347,26 +365,26 @@ $(function () {
     */
    function validateName() {
       let name = name_input.value;
-      let message = '';
+      message = '';
 
       if (name.length === 0) {
          message = 'Your first and last name are required!';
          is_name_valid = false;
-         getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+         getPrompt(message, `${name_prompt.id}`, semantic_alert);
 
          return false;
       }
       if (!name.match(name_pattern)) {
          message = 'Enter first and last name!';
          is_name_valid = false;
-         getPrompt(message, 'contact__form--name-prompt', semantic_alert);
+         getPrompt(message, `${name_prompt.id}`, semantic_alert);
 
          return false;
       }
 
       message = 'Welcome ' + name;
       is_name_valid = true;
-      getPrompt(message, 'contact__form--name-prompt', semantic_success);
+      getPrompt(message, `${name_prompt.id}`, semantic_success);
 
       return true;
    }
@@ -378,26 +396,26 @@ $(function () {
     */
    function validateEmail() {
       let email = email_input.value;
-      let message = '';
+      message = '';
 
       if (email.length === 0) {
          message = 'Your email address is required!';
          is_email_valid = false;
-         getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+         getPrompt(message, `${email_prompt.id}`, semantic_alert);
 
          return false;
       }
       if (!email.match(email_pattern)) {
          message = 'Invalid email address!';
          is_email_valid = false;
-         getPrompt(message, 'contact__form--email-prompt', semantic_alert);
+         getPrompt(message, `${email_prompt.id}`, semantic_alert);
 
          return false;
       }
 
       message = 'Valid email address';
       is_email_valid = true;
-      getPrompt(message, 'contact__form--email-prompt', semantic_success);
+      getPrompt(message, `${email_prompt.id}`, semantic_success);
 
       return true;
    }
@@ -410,21 +428,21 @@ $(function () {
    function validateMessage() {
       let form_message = message_input.value;
       form_message = removeHTMLTags(form_message);
-      let message = '';
+      message = '';
 
       let characters_left = required_message_length - form_message.length;
 
       if (form_message.length < required_message_length) {
          message = characters_left + ' more characters required in message!';
          is_message_valid = false;
-         getPrompt(message, 'contact__form--message-prompt', semantic_alert);
+         getPrompt(message, `${message_prompt.id}`, semantic_alert);
 
          return false;
 
       } else {
          message = 'Valid message';
          is_message_valid = true;
-         getPrompt(message, 'contact__form--message-prompt', semantic_success);
+         getPrompt(message, `${message_prompt.id}`, semantic_success);
 
          return true;
       }
@@ -506,6 +524,15 @@ $(function () {
       resetForm();
    }
 
+   function resetContactFormInputPrompts() {
+      name_prompt.innerHTML = '';
+      email_prompt.innerHTML = '';
+      message_prompt.innerHTML = '';
+      name_prompt.value = '&nbsp;';
+      email_prompt.value = '&nbsp;';
+      message_prompt.value = '&nbsp;';
+   }
+
    /**
     * @description - resets the form and clears all the timeouts
     * @returns {void}
@@ -523,7 +550,7 @@ $(function () {
          clearTimeout(timeoutID9);
       }
       timeoutID8 = setTimeout(() => {
-         location.reload();
+         // location.reload();
 
          timeoutID9 = setTimeout(() => {
             name_input.value = '';
@@ -535,6 +562,9 @@ $(function () {
             is_name_valid = false;
             is_email_valid = false;
             is_message_valid = false;
+            resetContactFormInputPrompts();
+            removeJSEffect();
+
          }, 2000);
       }, 13500);
    }

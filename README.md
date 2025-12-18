@@ -5,7 +5,7 @@ a <em>Software and Web Developer</em>,<br> showcasing his soft and technical ski
 with e-commerce solutions, websites, and web applications.</p>
 
 ## Features
-- This is a HTMl5, CSS3, and JavaScript application utilizing Tailwind CSS
+- HTMl5, CSS3, and JavaScript application utilizing Tailwind CSS
 - Utilizing Semantic HTML5 elements
 - Responsive design layout with Flexbox and CSS Grid
 - Interactive CSS Animations
