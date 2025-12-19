@@ -10,6 +10,8 @@
     --color-neutral-100: hsl(211.2, 0%, 88%);
     --color-neutral-400: hsl(211.2, 0%, 58%);
     --font-weight-normal: 400;
+    --font-weight-semibold: 700;
+    --font-weight-bold: 800;
     --ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
     --ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
     --default-transition-duration: 150ms;
@@ -19,11 +21,12 @@
     --font-body: 'Montserrat', sans-serif;
     --font-heading: 'Lora', serif;
     --font-monospace: 'Noto Sans Mono', monospace;
+    --font-style-italic: italic;
     --color-blue-01-000: hsl(211.2, 100%, 98%);
     --color-blue-01-200: hsl(211.2, 90%, 89.8%);
     --color-blue-01-600: hsl(211.2, 74.26%, 19.8%);
     --color-augmented-700: hsl(211.2, 20%, 28%);
-    --color-augmented-800: hsl(211.2, 25%, 18%);
+    --color-augmented-900: hsl(211.2, 30%, 10%);
     --ease-basic-01: cubic-bezier(0.26, 0.1, 0.27, 1.55);
     --radius-200: 3px;
   }
@@ -371,7 +374,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-    color: var(--color-augmented-800);
+    color: var(--color-augmented-900);
     background-color: var(--color-blue-01-000);
   }
   h1, h2, h3, h4, h5, h6 {
@@ -2258,6 +2261,16 @@ i.fa-brands.fa-linkedin:hover, i.fa-brands.fa-linkedin:focus, i.fa-brands.fa-squ
 }
 .utils-text-center {
   text-align: center !important;
+}
+.utils-bold-italic-text {
+  font-weight: var(--font-weight-semibold);
+  font-style: var(--font-style-italic);
+}
+.utils-bold-text {
+  font-weight: var(--font-weight-semibold);
+}
+.utils-italic-text {
+  font-style: var(--font-style-italic);
 }
 .utils-margin-bottom-small {
   margin-bottom: 1.5em;
