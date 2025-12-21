@@ -11,7 +11,6 @@
     --color-neutral-400: hsl(211.2, 0%, 58%);
     --font-weight-normal: 400;
     --font-weight-semibold: 700;
-    --font-weight-bold: 800;
     --ease-out: cubic-bezier(0.05, 0.21, 0.66, 0.98);
     --ease-in-out: cubic-bezier(0.38, 0, 0.57, 0.99);
     --default-transition-duration: 150ms;

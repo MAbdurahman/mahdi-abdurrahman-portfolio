@@ -10,8 +10,8 @@
           preloader scripts
  ==================================================================*/
 document.addEventListener('DOMContentLoaded', function () {
-   // makes sure that whole site is loaded, so the 2500ms counter-down coincides with
-   // the preloader and the delay of 3000ms for the header content animation
+   // makes sure that whole site is loaded, so the 3000ms preloader coincides with
+   // the delay of 3000ms for the header content animation
   const preloader = document.getElementById('preloader');
    const preloader_gif = document.getElementById('preloader__gif');
 
