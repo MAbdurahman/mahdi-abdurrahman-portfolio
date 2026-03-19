@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang='en-US'>
+<head>
+    <meta charset='UTF-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='ie=edge' http-equiv='X-UA-Compatible'>
+    <!--add your project information here -->
+    <meta content='Brief portfolio about Mahdi Abdurrahman, Software and Web Developer. Showcasing his soft and technical skills with e-commerce solutions, websites, and web applications'
+          name='description'>
+    <meta content='Developer portfolio, NodeJS, ReactJS, and MERN Stack'
+          name='keywords'>
+    <meta content='Mahdi Abdurrahman | Portfolio' name='application-name'>
+    <meta content='Mahdi Abdurrahman' name='author'>
+    
+    <!--favicon -->
+    <link href='favicon.png' rel='shortcut icon'/>
+    <!-- normalize styles -->
+    <link href='css/normalize.css' rel='stylesheet'/>
+    <!-- fontawesome icons-->
+    <link crossorigin='anonymous'
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
+          integrity='sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=='
+          referrerpolicy='no-referrer' rel='stylesheet'/>
+    <!-- image hover-extended styles -->
+    <link href='css/imagehover-extended.css' rel='stylesheet'/>
+    <!-- google fonts -->
+    <link href='https://fonts.googleapis.com' rel='preconnect'>
+    <link crossorigin href='https://fonts.gstatic.com' rel='preconnect'>
+    <link href='https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap'
+          rel='stylesheet'>
+    <!-- main styles -->
+    <link href='css/main.css' rel='stylesheet'/>
+    
+    <!-- jQuery-v-3.7.1 scripts -->
+    <script defer src='js/jquery/jquery-3.7.1.min.js'></script>
+    <!-- filterizr scripts -->
+    <script defer src='js/filterizr/jquery.filterizr.js'></script>
+    <!--font awesome-->
+    <script defer src='js/all.min.js'></script>
+    <!-- waypoints js - https://github.com/imakewebthings/waypoints -->
+    <script defer src='js/waypoints/jquery.waypoints.min.js'></script>
+    <!-- Typed Plugin - https://github.com/mattboldt/typed.js -->
+    <script defer src='js/typed-js/typed.min.js'></script>
+    <!-- main scripts -->
+    <script defer src='js/main.js'></script>
+    <title>Mahdi Abdurrahman | Portfolio</title>
+</head>
+<body>
+<!-- preloader -->
+<section class='preloader scrollbar-hidden' id='preloader'>
+    <img alt='Three spinning gears' class='preloader__gif'
+         id='preloader__gif' src='./img/gifs/preloader.gif'/>
+</section>
+<!-- navigation -->
+<section class='navigation' id='navigation'>
+    <div class='navigation__button' id='navigation__button'>
+        <span class='navigation__button__bar'></span>
+        <span class='navigation__button__bar'></span>
+        <span class='navigation__button__bar'></span>
+    </div>
+    <nav class='navigation__background' id='navigation__background'>
+        <section class='navigation__background--inner'
+                 id='navigation__background--inner'>
+            <ul class='navigation__list' id='navigation__list'>
+                <li class='navigation__item'>
+                    <a class='navigation__link active' href='#home'>
+                    <span class='navigation__span'>
+                        <i class='fas fa-home'></i>
+                    </span>
+                        home
+                    </a>
+                </li>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#about'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-user-tie'></i>
+                        </span>
+                        about me
+                    </a>
+                </li>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#skills'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-tools'></i>
+                        </span>
+                        my skills
+                    </a>
+                </li>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#portfolio'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-images'></i>
+                        </span>
+                        portfolio
+                    </a>
+                </li>
+                <li class='navigation__item'>
+                    <a class='navigation__link' href='#contact'>
+                        <span class='navigation__span'>
+                            <i class='fas fa-envelope'></i>
+                        </span>
+                        contact me
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</section>
+
+<!-- header -->
+<header class='header js-scroll-spy' id='home'>
+    <div class='header__logo__container'>
+        <img alt='Brand logo' class='header__logo' src='./img/header/logo.png'/>
+    </div>
+    <div class='header__video__container'>
+        <video autoplay class='header__video__item' id='header__video-item' loop
+               muted poster='./videos/img/binary-code.jpg'>
+            <source src='./videos/mp4/binary-code.mp4' type='video/mp4'>
+            <source src='./videos/ogv/binary-code.ogv' type='video/ogv'>
+            <source src='./videos/webm/binary-code.webm' type='video/webm'>
+            Your browser does not support the video tag!
+        </video>
+        <div class='header__video__overlay'></div>
+    </div>
+    <section class='header__content'>
+        <div class='header__content__heading'>
+            <h1 class='header__content__heading--one'>Mahdi</h1>
+            <h1 class='header__content__heading--two'>Abdurrahman</h1>
+        </div>
+        <div class='header__content__subheading'>
+            <h2 class='header__content__subheading--one'>Software and Web
+                Developer</h2>
+        </div>
+        <div class='header__content__buttons'>
+            <a class='header__button' href='#about' id='header__button'
+               role='button'>View More</a>
+            <a class='header__button--arrow' href='#about' id='arrow__down'><i
+                    class='fa fa-chevron-down'></i></a>
+        </div>
+    </section>
+</header>
+<!-- main content -->
+<main class='main'>
+    <!-- about section -->
+    <section class='section section__two js-scroll-spy' id='about'>
+        <div class='utils-container'>
+            <div class='about__section'>
+                <div class='about__section__title'>
+                    <h2 class='about__title'>About Me</h2>
+                </div>
+                <div class='about__section__content'>
+                    <div class='about__section--left'>
+                        <img alt='Mahdi Abdurrahman'
+                             class='utils-img-responsive about__image'
+                             src='./img/about/mabdurrahman.png'>
+                    </div>
+                    <div class='about__section--right'>
+                        <p class='about__info__text'>
+                            Hello, I am <span class='utils-bold-italic-text'>Mahdi Abdurrahman</span>, a
+                            Software and Web Developer, living in the
+                            southeast region of the United States, working primarily
+                            with
+                            desktop applications, web applications, responsive
+                            website
+                            development, and databases.&nbsp;&nbsp;I have a
+                            bachelor's in Criminal
+                            Justice, approximately three years towards a bachelor's
+                            in Computer
+                            Science, and I am self-taught in other information
+                            technologies.
+                        </p>
+                        <p class='about__info__text'>
+                            I specialize in creating beautiful, reusable, and
+                            professional websites, using the best
+                            practices, standards, and guidelines.&nbsp;&nbsp;This
+                            results in semantic and SEO friendly
+                            websites, which improves the quality and quantity of
+                            website traffic.&nbsp;&nbsp;<span class='utils-bold-italic-text'>I put
+                            my heart and soul into my work!</span>
+                        </p>
+                        <p class='about__info__text utils-margin-bottom-small'>
+                            When not writing code, I continue to investigate,
+                            experiment, and test to improve existing methods
+                            of software and web development.&nbsp;&nbsp;For, I am not
+                            content to rely on past laurels.&nbsp;&nbsp;Also, I have
+                            a
+                            strong interest in Mathematics and an appreciation
+                            for the Arts.&nbsp;&nbsp;<span class='utils-bold-italic-text'>But, programming and
+                            computer science are my passions!</span>
+                        </p>
+                        <div class='about__info__links'>
+                            <a class='about__info__link'
+                               href='tel:901-424-5525'>
+                                contact me
+                            </a>
+                            <a class='about__info__link' href='#skills'>
+                                learn more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skills section -->
+    <section class='section section__three js-scroll-spy' id='skills'>
+        <div class='utils-container'>
+            <div class='skills__section'>
+                <h2 class='skills__section--title'>My Skills</h2>
+                <section class='skills__section__content'>
+                    <div class='skills__section__content--left'>
+                        <h3 class='skills__section--sub-title'>soft skills</h3>
+                        <section class='accordions'>
+                            <section class='accordion'>
+                                <input checked='checked' class='js-accordion-input'
+                                       id='handle1'
+                                       name='collapse' type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle1'>Detail Oriented</label>
+                                </h4>
+                                <div class='content'>
+                                    <p>In programming and computer science, <strong>attention
+                                        to detail is crucial</strong> for creating
+                                        high-quality
+                                        software and web applications. As a
+                                        developer, one must
+                                        be able to critically look at long lines of
+                                        code and
+                                        discern anything amiss. Having an eye for
+                                        small details
+                                        can affect a project's subtle issues, which
+                                        in turn are
+                                        impactful to the overall project. Being a
+                                        stickler for
+                                        details is an immense ability.</p>
+                                </div>
+                            </section>
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle2'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle2'>Effective
+                                        Communication</label>
+                                </h4>
+                                <div class='content'>
+                                    <p>Although programming is the basic and central
+                                        part of computer science, the ability
+                                        to <strong>communicate effectively is a
+                                            necessary skill</strong>, both verbal and
+                                        written. When describing complex ideas in
+                                        layman terms, advocating for a particular
+                                        position, or
+                                        comprising to modify a project, one must
+                                        possess good intrapersonal skills. In short,
+                                        one must be willing to actively listen, pay
+                                        attention to verbal and nonverbal cues, and
+                                        assert oneself in workplace communication.
+                                    </p>
+                                </div>
+                            </section>
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle3'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle3'>Creative
+                                        Problem-Solving</label>
+                                </h4>
+                                <div class='content'>
+                                    <p>Some people think computer science is all
+                                        logic, reason,
+                                        and proofs, but that is simply not the case.
+                                        <strong>Creative problem-solving is an
+                                            essential
+                                            skill</strong> that goes beyond writing
+                                        code. When
+                                        bringing designs to life, one must be willing
+                                        to
+                                        think
+                                        outside the box to solve problems and create
+                                        unique
+                                        solutions for modern websites and web
+                                        applications.
+                                    </p>
+                                </div>
+                            </section>
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle4'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle4'>Time Management</label>
+                                </h4>
+                                <div class='content'>
+                                    <p>If there were ten commandments for programming
+                                        and computer
+                                        science, <strong>manage thy time wisely
+                                            skill</strong> would have to
+                                        be on the list. Because most jobs in the IT
+                                        field have tight
+                                        deadlines, competing priorities, and quick
+                                        transitions between
+                                        tasks. Establishing goals, effectively
+                                        organizing
+                                        priorities, and minimizing
+                                        procrastination are a few attributes to help
+                                        one stay on top of
+                                        various tasks and responsibilities.</p>
+                                </div>
+                            </section>
+                            <section class='accordion'>
+                                <input class='js-accordion-input' id='handle5'
+                                       name='collapse'
+                                       type='radio'>
+                                <h4 class='handle'>
+                                    <label for='handle5'>Teamwork and
+                                        Cooperation</label>
+                                </h4>
+                                <div class='content'>
+                                    <p>Being <strong>a good team player is a great
+                                        skill</strong> in any
+                                        organization, but it is particularly
+                                        important
+                                        if one is working in computer science. Many
+                                        times, software and web developers are
+                                        expected to
+                                        collaborate with a number of different groups
+                                        within an organization to ensure timelines
+                                        are met and expectations are fulfilled.</p>
+                                </div>
+                            </section>
+                        </section>
+                    </div>
+                    <div class='skills__section__content--right'>
+                        <h3 class='skills__section--sub-title'>tech skills</h3>
+                        <section class='progress__bars' id='progress-bars'>
+                            <!--skill 1-->
+                            <div class='skill'>
+                                <h4>HTML5</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='90' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skill 2-->
+                            <div class='skill'>
+                                <h4>CSS3</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='85' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skill 3-->
+                            <div class='skill'>
+                                <h4>JavaScript</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='84' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>84%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skill 4-->
+                            <div class='skill'>
+                                <h4>NodeJS</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='77' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>77%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skill 5-->
+                            <div class='skill'>
+                                <h4>NoSQL/SQL</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='73' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>73%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--skill 6-->
+                            <div class='skill'>
+                                <h4>Git/GitHub</h4>
+                                <div class='progress'>
+                                    <div aria-valuemax='100' aria-valuemin='0'
+                                         aria-valuenow='85' class='progress-bar'
+                                         role='progressbar' style='width: 0;'>
+                                        <span>85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio section -->
+    <section class='section section__four js-scroll-spy--long' id='portfolio'>
+        <div class='utils-container'>
+            <div class='portfolio__section'>
+                <div class='portfolio__section--upper'>
+                    <h2 class='portfolio__section--title'>My Portfolio</h2>
+                    <section class='portfolio__section--container'>
+                        <ul class='portfolio__filters' id='portfolio__filters'>
+                            <li class='portfolio__filter js-filter active'
+                                data-filter='all'>
+                                projects
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='software'>
+                                software
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='website'>
+                                websites
+                            </li>
+                            <li class='portfolio__filter js-filter'
+                                data-filter='webapp'>
+                                webApps
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class='portfolio__section--bottom filtr-container'
+                     style='gap: 1.5em'>
+                    <!-- portfolio card 01 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='software' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Chat App is a MERN full stack application. It is
+                                    built using Socket.io, which enables instant
+                                    messaging between one-to-one or group chats. Users
+                                    can create accounts and manage their profiles. The
+                                    application is responsive and works on all devices.
+                                    It is consists of a powerful combination of technologies
+                                    for developing robust and scalable applications.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Chat App</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 02 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='website' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Landing Page is a React.js website, and it is suitable for a
+                                    number of applications, such as startups, educational courses,
+                                    agencies, and more. It is responsive, which means it
+                                    works on all devices. Its design is modern to captivate users
+                                    and provide a seamless experience in light and dark modes.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Landing Page</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 03 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='webapp, software' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/doctors-app.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Doctors App is a full stack MERN digital platform
+                                    designed to simplify the process of booking
+                                    appointments with healthcare providers. It
+                                    allows users to create accounts, search for doctors
+                                    based on specialty and availability. Users are
+                                    allowed to make or cancel appointments, and the
+                                    option to pay online physician fees.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Doctors App</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 04 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='software, webapp' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Social Media is a full stack MERN platform to
+                                    create dynamic and interactive user experiences.
+                                    It allows users to create accounts, real-time
+                                    posts, likes, comments, and chat functionality.
+                                    It is responsive and works on all devices, and
+                                    includes a dashboard for admin users to manage
+                                    the platform.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Social Media</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 05 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='website, webapp' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    Book Store is a full stack web application that
+                                    features books. It allows users to create accounts,
+                                    search for books, and make purchases. Also, it
+                                    includes a dashboard for admin users to manage
+                                    with CRUD operations for books, authors, and
+                                    inventory data. It is responsive and works on
+                                    all devices, and showcases the full stack MERN
+                                    development.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>Book Store</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                    
+                    <!-- portfolio card 06 -->
+                    <article class='portfolio__card filtr-item'
+                             data-category='webapp, website' data-sort='value'>
+                        <figure class='imghvr-cube-up'>
+                            <img alt='placeholder'
+                                 class='utils-img-responsive-up-and-down'
+                                 src='./img/portfolio/placeholder.png'>
+                            <figcaption>
+                                <p class='portfolio__para ih-fade-down ih-delay-sm'>
+                                    E-Store is a MERN full stack application. It delivers
+                                    a seamless online shopping experience. It allows users
+                                    to search for products by name, category, and  price.
+                                    It includes a dashboard for admin users to manage
+                                    products, orders, and users. It has a responsive design,
+                                    and showcases the full stack MERN development.
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <h4 class='portfolio__card--title'>E-Store</h4>
+                        <div class='portfolio__card__button--container'>
+                            <a class='anchor--two' href='#' role='button'
+                               target='_blank'>View Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section -->
+    <section class=' section section__five js-scroll-spy' id='contact'>
+        <div class='utils-container'>
+            <div class='contact__section'>
+                <div class='contact__section--upper'>
+                    <div class='contact__section--title-text'>
+                        <h2 class='contact__section--title'>Contact Me</h2>
+                    </div>
+                    <div class='contact__section--title-paragraph'
+                         id='contact__section--title-paragraph'>
+                        <h5 class='contact__section--paragraph'
+                            id='contact__section--paragraph'>I</h5>
+                    </div>
+                </div>
+                <div class='contact__section--bottom'>
+                    <div class='contact__form--group' id='contact__form--group'>
+                        <form action='' class='contact__form' id='contact__form'>
+                            <div class='contact__form--content js-effect-07'>
+                                <input class='utils-effect-07' id='input-01'
+                                       name='fullName'
+                                       placeholder='' type='text'/>
+                                <label for='input-01'>Full name</label>
+                                <span class='focus-background-07'></span>
+                                <span class='contact__form--input-prompt'
+                                      id='contact__form--name-prompt'>&nbsp;</span>
+                            </div>
+                            <div class='contact__form--content js-effect-07'>
+                                <input class='utils-effect-07' id='input-02'
+                                       name='email'
+                                       placeholder='' type='text'/>
+                                <label for='input-02'>Email</label>
+                                <span class='focus-background-07'></span>
+                                <span class='contact__form--input-prompt'
+                                      id='contact__form--email-prompt'>&nbsp;</span>
+                            </div>
+                            <div class='contact__form--content-textarea js-effect-07'>
+                                <textarea class='utils-effect-07'
+                                          id='contact__form--message'
+                                          maxlength='160' name='message'
+                                          placeholder='' rows='3'
+                                          type='textarea'></textarea>
+                                <label for='contact__form--message'>Message</label>
+                                <span class='focus-background-07'></span>
+                                <span class='contact__form--input-prompt-textarea'
+                                      id='contact__form--message-prompt'>&nbsp;</span>
+                            </div>
+                            <div class='notification__message'
+                                 id='notification__message'>
+                                <h4 class='notification__message--title'
+                                    id='notification__message--title'></h4>
+                            </div>
+                            <div class='contact__form--content'>
+                                <input class='contact__form--button submit'
+                                       id='contact__form--submit'
+                                       type='button'
+                                       value='Send Message'>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer section -->
+    <footer class='section__footer'>
+        <div class='utils-container'>
+            <div class='footer'>
+                <div class='footer__top'>
+                    <div class='footer__top--left'>
+                        <h5 class='footer__sub-title'>Mission Statement</h5>
+                        <p class='footer__logo-statement'>
+                            My mission is to leverage cutting-edge technology to
+                            empower
+                            individuals,
+                            groups, and organizations to achieve their full
+                            potential.
+                            Through programming, engineering, art, research, and
+                            innovation,
+                            I bring a commitment of excellence to delivering each
+                            concept
+                            in its
+                            digital transformation.
+                        </p>
+                    </div>
+                    <div class='footer__top--center-left'>
+                        <h5 class='footer__sub-title'>Navigation</h5>
+                        <ul class='footer__navigation-list'
+                            id='footer__navigation-list'>
+                            <li class='footer__navigation-link-item'>
+                                <a class='footer__navigation-link'
+                                   href='#home'>home</a>
+                            </li>
+                            <li class='footer__navigation-link-item'>
+                                <a class='footer__navigation-link' href='#about'>about
+                                    me</a>
+                            </li>
+                            <li class='footer__navigation-link-item'>
+                                <a class='footer__navigation-link' href='#skills'>my
+                                    skills</a>
+                            </li>
+                            <li class='footer__navigation-link-item'>
+                                <a class='footer__navigation-link' href='#portfolio'>portfolio</a>
+                            </li>
+                            <li class='footer__navigation-link-item'>
+                                <a class='footer__navigation-link' href='#contact'>contact
+                                    me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='footer__top--center-right'>
+                        <h5 class='footer__sub-title'>Contact</h5>
+                        <ul class='footer__contact-list'>
+                            <li class='footer__contact-link-item'>
+                                <a class='footer__contact-link'
+                                   href='mailto:mdbdrrhm@gmail.com'>
+                                    <i aria-hidden='true'
+                                       class='fa-solid fa-envelope-open-text'></i>
+                                    mahdi@abdurrahman.com
+                                </a>
+                            </li>
+                            <li class='footer__contact-link-item'>
+                                <a class='footer__contact-link'
+                                   href='tel:901-424-5525'>
+                                    <i aria-hidden='true'
+                                       class='fa-solid fa-phone'></i>
+                                    901.424.5525
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='footer__top--right'>
+                        <h5 class='footer__sub-title'>Social Media</h5>
+                        <ul class='footer__social-media-list'>
+                            <li class='footer__social-media-link-item'>
+                                <a class='footer__social-media-link'
+                                   href='https://www.linkedin.com/feed/'
+                                   target='_blank'>
+                                    <i aria-hidden='true'
+                                       class='fa-brands fa-linkedin'></i>
+                                </a>
+                            </li>
+                            <li class='footer__social-media-link-item'>
+                                <a class='footer__social-media-link'
+                                   href='https://github.com/MAbdurahman'
+                                   target='_blank'>
+                                    <i aria-hidden='true'
+                                       class='fa-brands fa-square-github'></i>
+                                </a>
+                            </li>
+                            <li class='footer__social-media-link-item'>
+                                <a class='footer__social-media-link'
+                                   href='https://codepen.io/MAbdurrahman/'
+                                   target='_blank'>
+                                    <i aria-hidden='true'
+                                       class='fa-brands fa-codepen'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class='footer__top-separator'>
+            <div class='footer__bottom'>
+                <p class='footer__bottom-copyright'>&copy;&nbsp;2025 Mahdi
+                    Abdurrahman,
+                    All Rights Reserved</p>
+                <a class='footer__bottom-terms' href='./terms-conditions.html'
+                   target='_blank'>Terms and Conditions</a>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
