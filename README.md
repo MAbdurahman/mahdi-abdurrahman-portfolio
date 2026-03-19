@@ -18,3 +18,18 @@ with e-commerce solutions, websites, and web applications.</p>
   .block__element {}
   .block__element--modifier {}
   ```
+## To Use
+Clone or Download the repository
+`git clone  https://github.com/MAbdurahman/mahdi-abdurrahman-portfolio.git`
+
+Install the dependencies
+
+`npm install or yarn`
+
+To watch the CSS files
+
+`npm run start or yarn start`
+
+To build the project, run the following command
+
+`npm run build or yarn build`
